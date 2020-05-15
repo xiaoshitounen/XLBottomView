@@ -1,6 +1,6 @@
 # XLBottomView 
 
-详细内容博客地址:[自定义View-PageController](https://fanandjiu.com/%E8%87%AA%E5%AE%9A%E4%B9%89View-PageController/#more)
+详细内容博客地址:[自定义View-XLBottomView](https://xuxiaoshi.gitee.io/%E8%87%AA%E5%AE%9A%E4%B9%89View-XLBottomView/#more)
 
 简介：
 
@@ -115,7 +115,29 @@ public class MainActivity extends AppCompatActivity {
 
 #### ② 回调当前被点击的item
 
+~~~java
+//实现回调接口
+public interface XLBottomViewItemListener{
+    void itemStatusDidChange(int index);
+}
+~~~
+
+~~~java
+bottomView.setXLBottomViewItemListener(new XLBottomView.XLBottomViewItemListener() {
+    @Override
+    public void itemStatusDidChange(int index) {
+        Toast toast = Toast.makeText(MainActivity.this, "第" + (index + 1) + "个按钮被点击", Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER,0,0);
+        toast.show();
+    }
+});
+~~~
+
 
 ### 3. Java代码中动态添加
 
+~~~java
+//item_layout暂时没有用，没有的话可以传0
+public XLBottomView(Context context, int normal_color, int select_color, boolean hasLeftOrRightSize, int item_size, int item_layout);
+~~~
 
