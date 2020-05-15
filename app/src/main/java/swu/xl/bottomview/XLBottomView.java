@@ -126,8 +126,8 @@ public class XLBottomView extends RelativeLayout {
                             (horizon_size + PxUtil.dpToPx(item_size,getContext())) * i;
                     if (!hasLeftOrRightSize){
                         //左右两端不设置间距也留一点间距
-                        if (i == 0) left += 20;
-                        if (i == items.size()-1) left -= 20;
+                        if (i == 0) left += PxUtil.dpToPx(20,getContext());
+                        if (i == items.size()-1) left -= PxUtil.dpToPx(20,getContext());
                     }
                     int top = vertical_size;
                     int right = left + PxUtil.dpToPx(item_size,getContext());

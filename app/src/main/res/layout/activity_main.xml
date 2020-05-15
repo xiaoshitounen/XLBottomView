@@ -13,7 +13,7 @@
         android:background="#999999"
         app:normal_color="#000000"
         app:select_color="#ff9900"
-        app:hasLeftOrRightSize="true"
+        app:hasLeftOrRightSize="false"
         app:item_size="50"
         android:layout_alignParentBottom="true"
         />
