@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XLBottomView">
+        <!--正常状态的颜色-->
+        <attr name="normal_color" format="color"/>
+        <!--选中状态的颜色-->
+        <attr name="select_color" format="color"/>
+        <!--两端是否给间距-->
+        <attr name="hasLeftOrRightSize" format="boolean"/>
+        <!--item的大小-->
+        <attr name="item_size" format="integer"/>
+        <!--item的布局-->
+        <attr name="item_layout" format="reference"/>
+    </declare-styleable>
+</resources>
