@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
 - select_color：item选中状态的颜色
 - hasLeftOrRightSize：两端是否留有间距
 - item_size：item的大小
+- isSelectClick：选中的item被点击是否响应回调事件
 
 #### ② 回调当前被点击的item
 
