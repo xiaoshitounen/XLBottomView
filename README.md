@@ -28,7 +28,7 @@ allprojects {
 Step 2. Add the dependency
 ~~~
 dependencies {
-    implementation 'com.github.xiaoshitounen:XLBottomView:1.0.1'
+    implementation 'com.github.xiaoshitounen:XLBottomView:1.0.2'
 }
 ~~~
 
