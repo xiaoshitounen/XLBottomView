@@ -16,9 +16,7 @@
         app:hasLeftOrRightSize="false"
         app:item_size="50"
         android:layout_alignParentBottom="true"
+        app:isSelectClick="true"
         />
-
-
-
 
 </RelativeLayout>

@@ -11,5 +11,7 @@
         <attr name="item_size" format="integer"/>
         <!--item的布局-->
         <attr name="item_layout" format="reference"/>
+        <!--按钮选中状态被点击是否响应事件-->
+        <attr name="isSelectClick" format="boolean"/>
     </declare-styleable>
 </resources>

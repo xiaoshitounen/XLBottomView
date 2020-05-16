@@ -11,8 +11,6 @@ import android.widget.RelativeLayout;
 
 import java.util.List;
 
-;
-
 public class XLBottomView extends RelativeLayout {
     //日志
     public static final String TAG = "XLBottomView";
@@ -26,6 +24,8 @@ public class XLBottomView extends RelativeLayout {
     private int item_size = 50;
     //item的布局
     private int item_layout;
+    //按钮选中状态被点击是否响应事件
+    private boolean isSelectClick = false;
 
     //上一个被选中的
     private MyItem lastItem;
@@ -70,6 +70,7 @@ public class XLBottomView extends RelativeLayout {
             select_color = typedArray.getColor(R.styleable.XLBottomView_select_color,select_color);
             hasLeftOrRightSize = typedArray.getBoolean(R.styleable.XLBottomView_hasLeftOrRightSize,hasLeftOrRightSize);
             item_size = typedArray.getInteger(R.styleable.XLBottomView_item_size,item_size);
+            isSelectClick = typedArray.getBoolean(R.styleable.XLBottomView_isSelectClick,isSelectClick);
             //3.释放资源
             typedArray.recycle();
         }
@@ -164,6 +165,13 @@ public class XLBottomView extends RelativeLayout {
                                 if (listener != null){
                                     listener.itemStatusDidChange(selectItem.getItem_index());
                                 }
+                            }else {
+                                if (isSelectClick) {
+                                    //需要回调
+                                    if (listener != null){
+                                        listener.itemStatusDidChange(selectItem.getItem_index());
+                                    }
+                                }
                             }
                         }
                     });
@@ -207,5 +215,9 @@ public class XLBottomView extends RelativeLayout {
 
     public void setXLBottomViewItemListener(XLBottomViewItemListener listener) {
         this.listener = listener;
+    }
+
+    public void setSelectClick(boolean select) {
+        isSelectClick = select;
     }
 }

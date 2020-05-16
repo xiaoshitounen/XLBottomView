@@ -1,19 +1,13 @@
 package swu.xl.bottomview;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
-import android.widget.TextView;
-
-import com.google.android.material.tabs.TabItem;
 
 /**
  * 自定义View：子项
  */
-
 public class MyItem extends androidx.appcompat.widget.AppCompatTextView {
     //图片
     private int icon_id;
