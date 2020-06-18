@@ -1,5 +1,7 @@
 # XLBottomView 
 
+新版本的XLBottomView在：[XLNewBottomView](https://github.com/xiaoshitounen/XLNewBottomView)，在这里面解决了一些自定义View之前不明白的问题。
+
 详细内容博客地址:[自定义View-XLBottomView](https://xuxiaoshi.gitee.io/%E8%87%AA%E5%AE%9A%E4%B9%89View-XLBottomView/#more)
 
 简介：
