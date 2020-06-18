@@ -1,5 +1,7 @@
 # XLBottomView 
 
+新版本的XLBottomView在：[XLNewBottomView](https://github.com/xiaoshitounen/XLNewBottomView)，在这里面解决了一些自定义View之前不明白的问题。
+
 详细内容博客地址:[自定义View-XLBottomView](https://xuxiaoshi.gitee.io/%E8%87%AA%E5%AE%9A%E4%B9%89View-XLBottomView/#more)
 
 简介：
@@ -28,7 +30,7 @@ allprojects {
 Step 2. Add the dependency
 ~~~
 dependencies {
-    implementation 'com.github.xiaoshitounen:XLBottomView:1.0.1'
+    implementation 'com.github.xiaoshitounen:XLBottomView:1.0.2'
 }
 ~~~
 
@@ -112,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
 - select_color：item选中状态的颜色
 - hasLeftOrRightSize：两端是否留有间距
 - item_size：item的大小
+- isSelectClick：选中的item被点击是否响应回调事件
 
 #### ② 回调当前被点击的item
 
