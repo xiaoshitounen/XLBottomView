@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        XLBottomView bottomView = findViewById(R.id.bottom_view);
+        final XLBottomView bottomView = findViewById(R.id.bottom_view);
 
         List<XLBottomView.BottomViewItem> items = new ArrayList<>();
         XLBottomView.BottomViewItem item1 = new XLBottomView.BottomViewItem(
@@ -52,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(MainActivity.this, "第" + (index + 1) + "个按钮被点击", Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER,0,0);
                 toast.show();
+            }
+        });
+
+        bottomView.post(new Runnable() {
+            @Override
+            public void run() {
+                bottomView.getLastItem().changeStatus(MyItem.STATUS_NORMAL);
+                for (MyItem item_view : bottomView.getItem_views()) {
+                    if (item_view.getItem_index() == 1){
+                        item_view.changeStatus(MyItem.STATUS_SELECT);
+
+                        bottomView.setLastItem(item_view);
+
+                        break;
+                    }
+                }
             }
         });
     }

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class XLBottomView extends RelativeLayout {
@@ -35,6 +36,9 @@ public class XLBottomView extends RelativeLayout {
 
     //数据源
     private List<BottomViewItem> items;
+
+    //子视图
+    private List<MyItem> item_views;
 
     /**
      * 构造方法 Java代码初始化
@@ -82,7 +86,9 @@ public class XLBottomView extends RelativeLayout {
     /**
      * 初始化操作
      */
-    private void init() {}
+    private void init() {
+        item_views = new ArrayList<>();
+    }
 
     /**
      * 子View布局
@@ -175,6 +181,9 @@ public class XLBottomView extends RelativeLayout {
                             }
                         }
                     });
+
+                    //2.7存储
+                    item_views.add(item_view);
                 }
             }
         }
@@ -219,6 +228,22 @@ public class XLBottomView extends RelativeLayout {
 
     public void setSelectClick(boolean select) {
         isSelectClick = select;
+    }
+
+    public MyItem getLastItem() {
+        return lastItem;
+    }
+
+    public void setLastItem(MyItem lastItem) {
+        this.lastItem = lastItem;
+    }
+
+    public List<BottomViewItem> getItems() {
+        return items;
+    }
+
+    public List<MyItem> getItem_views() {
+        return item_views;
     }
 }
 
