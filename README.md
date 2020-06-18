@@ -144,3 +144,28 @@ bottomView.setXLBottomViewItemListener(new XLBottomView.XLBottomViewItemListener
 public XLBottomView(Context context, int normal_color, int select_color, boolean hasLeftOrRightSize, int item_size, int item_layout);
 ~~~
 
+
+***
+更新：添加选中
+
+~~~java
+bottomView.post(new Runnable() {
+    @Override
+    public void run() {
+        bottomView.getLastItem().changeStatus(MyItem.STATUS_NORMAL);
+        for (MyItem item_view : bottomView.getItem_views()) {
+            if (item_view.getItem_index() == 1){
+                item_view.changeStatus(MyItem.STATUS_SELECT);
+
+                bottomView.setLastItem(item_view);
+
+                break;
+            }
+        }
+    }
+});
+~~~
+
+
+
+
